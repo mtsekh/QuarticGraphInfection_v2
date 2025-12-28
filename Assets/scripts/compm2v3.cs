@@ -95,7 +95,7 @@ public class compm2v3 : MonoBehaviour
         SetComputingVisuals(true);
 
         if (timerText) timerText.text = "00:00:00   k=0";
-        if (outputText) outputText.text = "Computing m₂...";
+        if (outputText) outputText.text = "Computing m2...";
 
         cancelSource = new CancellationTokenSource();
         var token = cancelSource.Token;
@@ -134,7 +134,7 @@ public class compm2v3 : MonoBehaviour
         if (result.m2 < 0 || result.startSet == null)
         {
             if (outputText)
-                outputText.text = $"n = {n}, a = {a}\nm₂ = impossible";
+                outputText.text = $"n = {n}, a = {a}\nm2 = impossible";
             return;
         }
 
@@ -146,7 +146,7 @@ public class compm2v3 : MonoBehaviour
         {
             outputText.text =
                 $"n = {n}, a = {a}\n" +
-                $"m₂ = {result.m2}\n" +
+                $"m2 = {result.m2}\n" +
                 $"Start = [{string.Join(", ", savedStartSet)}]";
         }
 
@@ -327,10 +327,10 @@ public class compm2v3 : MonoBehaviour
         return true;
     }
 
-// =====================================================================
-// OPTIMIZED M2 COMPUTATION (pruning + symmetry + fast BFS)
-// =====================================================================
-(int, int[]) ComputeM2_Optimized(int n, int a, CancellationToken token)
+    // =====================================================================
+    // OPTIMIZED M2 COMPUTATION (pruning + symmetry + fast BFS)
+    // =====================================================================
+    (int, int[]) ComputeM2_Optimized(int n, int a, CancellationToken token)
     {
         int[][] nbrs = BuildAdjacency(n, a, token);
         if (nbrs == null) return (-1, null);
@@ -411,11 +411,6 @@ public class compm2v3 : MonoBehaviour
         // set is sorted increasing with set[0]=0
         int minNonZero = set[1];
         int max = set[set.Length - 1];
-        int reflectedMax = (n - minNonZero) % n; // largest element in reflected set
-
-        // Keep one canonical representative:
-        // equivalent heuristic: enforce minNonZero <= n - max
-        // This is simple and works well in practice.
         return minNonZero <= (n - max);
     }
 

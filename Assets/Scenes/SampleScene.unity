@@ -134,9 +134,7 @@ GameObject:
   - component: {fileID: 11640491}
   - component: {fileID: 11640490}
   - component: {fileID: 11640492}
-  - component: {fileID: 11640494}
   - component: {fileID: 11640493}
-  - component: {fileID: 11640495}
   - component: {fileID: 11640496}
   m_Layer: 0
   m_Name: main_brain
@@ -295,42 +293,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &11640494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11640489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56dd89d13d47d384e9d37a3e47faf275, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthyMat: {fileID: 2100000, guid: 5127637c57cd32b408f5ec489eaba8d1, type: 2}
-  infectedMat: {fileID: 2100000, guid: 81518545c170d114a8795ce415904675, type: 2}
-  generator: {fileID: 11640490}
-  vertexParent: {fileID: 1422420919}
-  slowModeToggle: {fileID: 0}
-  resultText: {fileID: 1152546971}
---- !u!114 &11640495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11640489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3568473bc77d0f145bdc4731f6a74a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthyMat: {fileID: 2100000, guid: 5127637c57cd32b408f5ec489eaba8d1, type: 2}
-  infectedMat: {fileID: 2100000, guid: 81518545c170d114a8795ce415904675, type: 2}
-  generator: {fileID: 11640490}
-  vertexParent: {fileID: 1422420919}
-  slowModeToggle: {fileID: 0}
-  resultText: {fileID: 1152546971}
 --- !u!114 &11640496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2130,7 +2092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -344, y: -191}
+  m_AnchoredPosition: {x: -345, y: -191}
   m_SizeDelta: {x: 97.9336, y: 22.9146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059673102
@@ -2177,8 +2139,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2053627404}
-        m_TargetAssemblyTypeName: m2newopttest, Assembly-CSharp
+      - m_Target: {fileID: 11640496}
+        m_TargetAssemblyTypeName: compm2v3, Assembly-CSharp
         m_MethodName: TerminateComputation
         m_Mode: 1
         m_Arguments:
@@ -4594,7 +4556,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2053627405}
-  - component: {fileID: 2053627404}
   - component: {fileID: 2053627406}
   - component: {fileID: 2053627407}
   - component: {fileID: 2053627408}
@@ -4605,28 +4566,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2053627404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053627403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7818654ec1d6fa49b787bb4fd215d52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputN: {fileID: 1581990772}
-  inputA: {fileID: 634981106}
-  outputText: {fileID: 1152546971}
-  timerText: {fileID: 1890732173}
-  vertexParent: {fileID: 1422420919}
-  healthyMat: {fileID: 2100000, guid: 5127637c57cd32b408f5ec489eaba8d1, type: 2}
-  infectedMat: {fileID: 2100000, guid: 81518545c170d114a8795ce415904675, type: 2}
-  autoInfectToggle: {fileID: 918531546}
-  autoStepDelay: 0.3
-  currentK: 0
 --- !u!4 &2053627405
 Transform:
   m_ObjectHideFlags: 0
